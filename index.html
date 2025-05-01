@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>抹茶オンラインショップ - Masao</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      background: #f9f8f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #2e2e2e;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+
+    .hero {
+      background: url('https://source.unsplash.com/featured/?matcha') no-repeat center center;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      background: rgba(0,0,0,0.4);
+      display: inline-block;
+      padding: 0.5rem 1rem;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+      gap: 1.5rem;
+    }
+
+    .product {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      width: 250px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .product h3 {
+      margin: 0.5rem 0;
+    }
+
+    button {
+      background-color: #6b8e23;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #556b2f;
+    }
+
+    .cart {
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #eee;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>抹茶専門店 - Masao</h1>
+    <div class="cart">🛒 カート：<span id="cart-count">0</span> 点</div>
+  </header>
+
+  <section class="hero">
+    <h2>心を癒す、上質な抹茶体験を。</h2>
+  </section>
+
+  <section class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/200x150?text=抹茶A" alt="抹茶A" />
+      <h3>抹茶A</h3>
+      <p>¥1,200</p>
+      <button onclick="addToCart()">カートに追加</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200x150?text=抹茶B" alt="抹茶B" />
+      <h3>抹茶B</h3>
+      <p>¥1,800</p>
+      <button onclick="addToCart()">カートに追加</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200x150?text=抹茶C" alt="抹茶C" />
+      <h3>抹茶C</h3>
+      <p>¥2,200</p>
+      <button onclick="addToCart()">カートに追加</button>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Masao Matcha. All rights reserved.
+  </footer>
+
+  <script>
+    let cartCount = 0;
+    function addToCart() {
+      cartCount++;
+      document.getElementById('cart-count').textContent = cartCount;
+    }
+  </script>
+</body>
+</html>
